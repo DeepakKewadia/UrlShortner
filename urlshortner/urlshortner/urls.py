@@ -24,4 +24,5 @@ urlpatterns = [
     path('login/', av.login, name="login"),
     path('logout/', av.logout, name="logout"),
     path('dashboard/', uv.dashboard, name="dashboard"),
+    path('generate/', uv.generate, name="generate"),
 ]
