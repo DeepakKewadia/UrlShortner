@@ -19,10 +19,11 @@ from authentication import views as av
 from urlhandler import views as uv
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', av.home),
+    path('', uv.home),
     path('signup/', av.signup, name="signup"),
     path('login/', av.login, name="login"),
     path('logout/', av.logout, name="logout"),
     path('dashboard/', uv.dashboard, name="dashboard"),
     path('generate/', uv.generate, name="generate"),
+    path('<str:query>/', uv.home, name="home"),
 ]
